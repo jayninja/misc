@@ -1,0 +1,7 @@
+  .\dsfok\dsfo.exe .\convert.vmdk 512 1024 descriptor1.txt
+  notepad descriptor1.txt
+  .\dsfok\dsfi.exe .\convert.vmdk 512 1024 descriptor1.txt
+  
+  Import-Module "C:\Program Files\Microsoft Virtual Machine Converter\mvmcCmdlet.psd1"
+  ConvertTo-MvmcVirtualHardDisk -SourceLiteralPath .\convert.vmdk -VhdType DynamicHardDisk -VhdFormat Vhdx -DestinationLiteralPath .\convert.vhdx
+   
