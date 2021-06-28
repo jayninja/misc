@@ -1,7 +1,4 @@
 
-Get-NetAdapter
-New-NetIPAddress -IPAddress 192.168.0.1 -PrefixLength 24 -InterfaceIndex 12
-New-NetNat -Name MyNATnetwork -InternalIPInterfaceAddressPrefix 192.168.0.0/24
 New-VMSwitch –SwitchName “NAT-Switch” –SwitchType Internal –Verbose
 Get-NetAdapter
 New-NetIPAddress –IPAddress 192.168.200.1 -PrefixLength 24 -InterfaceIndex 51 -verbose
